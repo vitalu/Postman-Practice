@@ -20,7 +20,7 @@ jobs:
          with:
           node-version: '22'
 
-       - name: Install newman & htmlextra
+       - name: Install newman and htmlextra
          run: |
               npm install -g newman
               npm install -g newman-reporter-htmlextra
