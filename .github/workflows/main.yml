@@ -34,8 +34,8 @@ jobs:
 
        - name: Upload report
          if: always()
-         uses: actions/uploadartifact@v4.6.2
+         uses: actions/upload-artifact@v6.0.0
          with:
-           name: newman-html-report
+           name: Newman Report
            path: newman/*.html
            
