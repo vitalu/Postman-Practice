@@ -31,3 +31,11 @@ jobs:
               -e QA.postman_environment.json \
               -d testdata.csv \
               -r cli,html-extra
+
+       - name: Upload report
+         if: always()
+         uses: actions/uploadartifact@v4.6.2
+         with:
+           name: newman-html-report
+           path: newman/*.html
+           
