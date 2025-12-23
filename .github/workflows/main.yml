@@ -23,16 +23,14 @@ jobs:
        - name: Install newman
          run: |
               npm install -g newman
-
-       - name: Install HTML extra
-         run: |
               npm install -g newman-reporter-htmlextra
 
+            
        - name: Run the Postman collection
          run: |
               newman run 'Inwarranty-flow Collection.postman_collection.json' \
               -e QA.postman_environment.json \
-              -r cli,html-extra
+              -r cli,htmlextra
 
        - name: Upload report
          if: always()
